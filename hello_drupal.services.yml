@@ -1,0 +1,9 @@
+services:
+  hello_drupal.twig_extension:
+    class: Drupal\hello_drupal\TwigExtension\AddTextColorExtension
+    tags:
+      - { name: twig.extension }
+  hello_drupal.twig.MyTwigExtension:
+      class: Drupal\hello_drupal\MyTwigExtension
+      tags:
+        - { name: twig.extension }

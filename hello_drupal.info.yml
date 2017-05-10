@@ -1,0 +1,5 @@
+name: Hello Drupal
+type: module
+description: Hello Drupal Module!
+core: 8.x
+ackage: Custom
