@@ -8,7 +8,11 @@ services:
   #  tags:
   #    - { name: twig.extension }
 #services:
-  hello_drupal.twig.kint_extension:
+  hello_drupal.twig.hello_extension:
     class: Drupal\hello_drupal\Twig\MyTwigExtension
+    tags:
+      - { name: twig.extension }
+  hello_drupal.twig.set_color:
+    class: Drupal\hello_drupal\Twig\AddTextColorExtension
     tags:
       - { name: twig.extension }
