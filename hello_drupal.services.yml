@@ -16,3 +16,8 @@ services:
     class: Drupal\hello_drupal\Twig\AddTextColorExtension
     tags:
       - { name: twig.extension }
+  hello_drupal.twig.filters:
+    #arguments: ['@renderer']
+    class: Drupal\hello_drupal\Twig\RemoveNumbersExtension
+    tags:
+      - { name: twig.extension }
