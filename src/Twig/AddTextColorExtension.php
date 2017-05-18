@@ -20,13 +20,14 @@ class AddTextColorExtension extends \Twig_Extension {
    * Generates a list of all Twig filters that this extension defines.
    */
   public function getFunctions() {
-    return array(
-      new \Twig_SimpleFunction('addcolor', array($this, 'filterAddColor'), array(
-        'is_safe' => array('html'),
-      )),
-    );
     return [
-      new \Twig_SimpleFunction('addcolor', array($this, 'filterAddColor'), array('is_safe' => array('html'))),
+      new \Twig_SimpleFunction(
+        'addcolor',
+        [$this, 'filterAddColor'],
+        [
+          'is_safe' => ['html'],
+        ]
+      ),
     ];
   }
 

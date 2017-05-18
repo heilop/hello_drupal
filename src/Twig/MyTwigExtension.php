@@ -20,11 +20,15 @@ class MyTwigExtension extends \Twig_Extension {
    * {@inheritdoc}
    */
   public function getFunctions() {
-    return array(
-      new \Twig_SimpleFunction('display_block', array($this, 'display_block'), array(
-        'is_safe' => array('html'),
-      )),
-    );
+    return [
+      new \Twig_SimpleFunction(
+        'display_block',
+        [$this, 'display_block'],
+        [
+          'is_safe' => ['html'],
+        ]
+      ),
+    ];
   }
 
   /**

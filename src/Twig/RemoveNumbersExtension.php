@@ -9,7 +9,6 @@ class RemoveNumbersExtension extends \Twig_Extension {
    */
   public function getFilters() {
     return [
-      //new \Twig_SimpleFilter('removenum', array($this, 'removeNumbers')),
       new \Twig_SimpleFilter('removenum', [$this, 'removeNumbers'], ['is_safe' => ['html']]),
     ];
   }
