@@ -36,7 +36,6 @@ class AddTextColorExtension extends \Twig_Extension {
    */
   public function filterAddColor($txt, $color) {
     return "<span style='color:$color'>$txt</span>";
-    return '<span style="color: ' . $color . '">Whatever</span>';
   }
 
 }
